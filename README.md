@@ -1,3 +1,8 @@
+# Attendance Management Application:
+A web application where it has department login and students login with their credentials .
+Faculity of the instituion can login and selects the class they want to manage the Attendance(present,absent,modify),check the overal count and percentages,overall summary of all the classes at one click by selecting the date specific.
+and the students can login with thier roll numbers and check the attendance of the day and overall percentage within sepecfic dates.
+the database is managed in sql, we can add the coming students with their details by importing a csv file with the data.
 # CodeIgniter 4 Framework
 
 ## What is CodeIgniter?
