@@ -1,0 +1,84 @@
+ERROR - 2023-08-20 12:07:34 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '1212'' AND date>=''2023-08-14'' AND date<='en_date' AND status='P'' at line 1 in C:\xampp\htdocs\codeig\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\codeig\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(DI...', 0)
+#1 C:\xampp\htdocs\codeig\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(DI...')
+#2 C:\xampp\htdocs\codeig\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(DI...')
+#3 C:\xampp\htdocs\codeig\app\Models\ClassesModel.php(145): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(DI...', Array)
+#4 C:\xampp\htdocs\codeig\app\Controllers\NavbarController.php(119): App\Models\ClassesModel->get_ranged_data('it', 'a', '5', 'multiple', '2023-08-14', '2023-08-23')
+#5 C:\xampp\htdocs\codeig\system\CodeIgniter.php(932): App\Controllers\NavbarController->summary()
+#6 C:\xampp\htdocs\codeig\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NavbarController))
+#7 C:\xampp\htdocs\codeig\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\codeig\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-08-20 12:07:34 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '1212'' AND date>=''2023-08-14'' AND date<='en_date' AND status='P'' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT COUNT(DISTINCT(date)) as \'pds\' FROM Attendance WHERE roll_number=\'\'1212\'\' AND date>=\'\'2023-08-14\'\' AND date<=\'en_date\' AND status=\'P\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(DISTINCT(date)) as \'pds\' FROM Attendance WHERE roll_number=\'\'1212\'\' AND date>=\'\'2023-08-14\'\' AND date<=\'en_date\' AND status=\'P\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(DISTINCT(date)) as \'pds\' FROM Attendance WHERE roll_number=\'\'1212\'\' AND date>=\'\'2023-08-14\'\' AND date<=\'en_date\' AND status=\'P\'')
+ 4 APPPATH\Models\ClassesModel.php(145): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(DISTINCT(date)) as \'pds\' FROM Attendance WHERE roll_number=\':rollno:\' AND date>=\':st_date:\' AND date<=\'en_date\' AND status=\'P\'', [...])
+ 5 APPPATH\Controllers\NavbarController.php(119): App\Models\ClassesModel->get_ranged_data('it', 'a', '5', 'multiple', '2023-08-14', '2023-08-23')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\NavbarController->summary()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NavbarController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-20 12:09:25 --> array_push(): Argument #1 ($array) must be of type array, null given
+in APPPATH\Models\ClassesModel.php on line 149.
+ 1 APPPATH\Models\ClassesModel.php(149): array_push(null, [...])
+ 2 APPPATH\Controllers\NavbarController.php(119): App\Models\ClassesModel->get_ranged_data('it', 'a', '5', 'multiple', '2023-08-14', '2023-08-23')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\NavbarController->summary()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NavbarController))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-20 14:18:06 --> Undefined property: App\Controllers\NavbarController::$load
+in APPPATH\Controllers\NavbarController.php on line 12.
+ 1 APPPATH\Controllers\NavbarController.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\NavbarController::$load', 'C:\\xampp\\htdocs\\codeig\\app\\Controllers\\NavbarController.php', 12)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\NavbarController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-20 14:21:14 --> syntax error, unexpected token "}", expecting ";"
+in APPPATH\Controllers\NavbarController.php on line 36.
+ 1 SYSTEMPATH\Router\Router.php(507): CodeIgniter\Router\AutoRouter->getRoute('NavbarController/index3', 'get')
+ 2 SYSTEMPATH\Router\Router.php(206): CodeIgniter\Router\Router->autoRoute('NavbarController/index3')
+ 3 SYSTEMPATH\CodeIgniter.php(813): CodeIgniter\Router\Router->handle('NavbarController/index3')
+ 4 SYSTEMPATH\CodeIgniter.php(447): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-20 14:21:25 --> Undefined property: App\Controllers\NavbarController::$load
+in APPPATH\Controllers\NavbarController.php on line 12.
+ 1 APPPATH\Controllers\NavbarController.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\NavbarController::$load', 'C:\\xampp\\htdocs\\codeig\\app\\Controllers\\NavbarController.php', 12)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\NavbarController->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(488): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-20 18:42:44 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 226.
+ 1 SYSTEMPATH\CodeIgniter.php(226): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+ 2 SYSTEMPATH\CodeIgniter.php(190): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-08-20 18:43:46 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 226.
+ 1 SYSTEMPATH\CodeIgniter.php(226): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+ 2 SYSTEMPATH\CodeIgniter.php(190): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 FCPATH\index.php(55): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-08-20 17:00:46 --> Undefined variable $data
+in APPPATH\Controllers\Stdnavcontroller.php on line 51.
+ 1 APPPATH\Controllers\Stdnavcontroller.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\codeig\\app\\Controllers\\Stdnavcontroller.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Stdnavcontroller->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stdnavcontroller))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-20 17:03:06 --> Undefined variable $data
+in APPPATH\Controllers\Stdnavcontroller.php on line 51.
+ 1 APPPATH\Controllers\Stdnavcontroller.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\codeig\\app\\Controllers\\Stdnavcontroller.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Stdnavcontroller->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stdnavcontroller))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-20 17:03:08 --> Undefined variable $data
+in APPPATH\Controllers\Stdnavcontroller.php on line 51.
+ 1 APPPATH\Controllers\Stdnavcontroller.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\codeig\\app\\Controllers\\Stdnavcontroller.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Stdnavcontroller->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stdnavcontroller))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
